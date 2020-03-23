@@ -62,6 +62,7 @@
             this.tboxAddressBar.Name = "tboxAddressBar";
             this.tboxAddressBar.Size = new System.Drawing.Size(290, 38);
             this.tboxAddressBar.TabIndex = 2;
+            this.tboxAddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tboxAddressBar_KeyDown);
             // 
             // butnGo
             // 

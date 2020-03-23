@@ -42,5 +42,13 @@ namespace SimpleBrowser
         {
             webBrowser1.GoForward();
         }
+
+        private void tboxAddressBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                webBrowser1.Navigate(tboxAddressBar.Text);
+            }
+        }
     }
 }
