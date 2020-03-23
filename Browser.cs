@@ -21,6 +21,16 @@ namespace SimpleBrowser
         private void InitializeBrowser()
         {
             webBrowser1.ScriptErrorsSuppressed = true;
+            webBrowser1.Width = this.ClientRectangle.Width;
+            webBrowser1.Height = this.ClientRectangle.Height - 100;
+            this.BackColor = Color.White;
+            this.ForeColor = Color.Black;
+
+            foreach (Control c in this.Controls)
+            {
+                c.BackColor = Color.White;
+                c.ForeColor = Color.Black;
+            }
         }
 
         private void butnHome_Click(object sender, EventArgs e)
@@ -55,6 +65,40 @@ namespace SimpleBrowser
         {
             webBrowser1.Width = this.ClientRectangle.Width;
             webBrowser1.Height = this.ClientRectangle.Height - 100;
+        }
+
+        private void butnRefresh_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
+
+        private void darkModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Black;
+            this.ForeColor = Color.White;
+
+            foreach (Control c in this.Controls)
+            {
+                c.BackColor = Color.Black;
+                c.ForeColor = Color.White;
+            }
+        }
+
+        private void lightModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+            this.ForeColor = Color.Black;
+
+            foreach (Control c in this.Controls)
+            {
+                c.BackColor = Color.White;
+                c.ForeColor = Color.Black;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

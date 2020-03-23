@@ -34,19 +34,27 @@
             this.butnGo = new System.Windows.Forms.Button();
             this.butnBack = new System.Windows.Forms.Button();
             this.butnForward = new System.Windows.Forms.Button();
+            this.butnRefresh = new System.Windows.Forms.Button();
+            this.menuBrowser = new System.Windows.Forms.MenuStrip();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.darkModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBrowser.SuspendLayout();
             this.SuspendLayout();
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(0, 62);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 97);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(796, 388);
+            this.webBrowser1.Size = new System.Drawing.Size(796, 353);
             this.webBrowser1.TabIndex = 0;
             // 
             // butnHome
             // 
-            this.butnHome.Location = new System.Drawing.Point(12, 12);
+            this.butnHome.Location = new System.Drawing.Point(12, 47);
             this.butnHome.Name = "butnHome";
             this.butnHome.Size = new System.Drawing.Size(123, 44);
             this.butnHome.TabIndex = 1;
@@ -57,7 +65,7 @@
             // tboxAddressBar
             // 
             this.tboxAddressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxAddressBar.Location = new System.Drawing.Point(141, 12);
+            this.tboxAddressBar.Location = new System.Drawing.Point(141, 47);
             this.tboxAddressBar.Name = "tboxAddressBar";
             this.tboxAddressBar.Size = new System.Drawing.Size(290, 38);
             this.tboxAddressBar.TabIndex = 2;
@@ -66,7 +74,7 @@
             // butnGo
             // 
             this.butnGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnGo.Location = new System.Drawing.Point(437, 12);
+            this.butnGo.Location = new System.Drawing.Point(437, 47);
             this.butnGo.Name = "butnGo";
             this.butnGo.Size = new System.Drawing.Size(123, 44);
             this.butnGo.TabIndex = 3;
@@ -77,7 +85,7 @@
             // butnBack
             // 
             this.butnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnBack.Location = new System.Drawing.Point(566, 12);
+            this.butnBack.Location = new System.Drawing.Point(566, 47);
             this.butnBack.Name = "butnBack";
             this.butnBack.Size = new System.Drawing.Size(59, 44);
             this.butnBack.TabIndex = 4;
@@ -88,7 +96,7 @@
             // butnForward
             // 
             this.butnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnForward.Location = new System.Drawing.Point(631, 12);
+            this.butnForward.Location = new System.Drawing.Point(631, 47);
             this.butnForward.Name = "butnForward";
             this.butnForward.Size = new System.Drawing.Size(58, 44);
             this.butnForward.TabIndex = 5;
@@ -96,20 +104,86 @@
             this.butnForward.UseVisualStyleBackColor = true;
             this.butnForward.Click += new System.EventHandler(this.butnForward_Click);
             // 
+            // butnRefresh
+            // 
+            this.butnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butnRefresh.Location = new System.Drawing.Point(695, 47);
+            this.butnRefresh.Name = "butnRefresh";
+            this.butnRefresh.Size = new System.Drawing.Size(58, 44);
+            this.butnRefresh.TabIndex = 6;
+            this.butnRefresh.Text = "⟲";
+            this.butnRefresh.UseVisualStyleBackColor = true;
+            this.butnRefresh.Click += new System.EventHandler(this.butnRefresh_Click);
+            // 
+            // menuBrowser
+            // 
+            this.menuBrowser.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuBrowser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.applicationToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.menuBrowser.Location = new System.Drawing.Point(0, 0);
+            this.menuBrowser.Name = "menuBrowser";
+            this.menuBrowser.Size = new System.Drawing.Size(800, 28);
+            this.menuBrowser.TabIndex = 7;
+            this.menuBrowser.Text = "menuStrip1";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.darkModeToolStripMenuItem,
+            this.lightModeToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // darkModeToolStripMenuItem
+            // 
+            this.darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
+            this.darkModeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.darkModeToolStripMenuItem.Text = "Dark Mode";
+            this.darkModeToolStripMenuItem.Click += new System.EventHandler(this.darkModeToolStripMenuItem_Click);
+            // 
+            // lightModeToolStripMenuItem
+            // 
+            this.lightModeToolStripMenuItem.Name = "lightModeToolStripMenuItem";
+            this.lightModeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lightModeToolStripMenuItem.Text = "Light Mode";
+            this.lightModeToolStripMenuItem.Click += new System.EventHandler(this.lightModeToolStripMenuItem_Click);
+            // 
+            // applicationToolStripMenuItem
+            // 
+            this.applicationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.applicationToolStripMenuItem.Name = "applicationToolStripMenuItem";
+            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.applicationToolStripMenuItem.Text = "Application";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // Browser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.butnRefresh);
             this.Controls.Add(this.butnForward);
             this.Controls.Add(this.butnBack);
             this.Controls.Add(this.butnGo);
             this.Controls.Add(this.tboxAddressBar);
             this.Controls.Add(this.butnHome);
             this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.menuBrowser);
+            this.MainMenuStrip = this.menuBrowser;
             this.Name = "Browser";
             this.Text = "Form1";
             this.Resize += new System.EventHandler(this.Browser_Resize);
+            this.menuBrowser.ResumeLayout(false);
+            this.menuBrowser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +197,13 @@
         private System.Windows.Forms.Button butnGo;
         private System.Windows.Forms.Button butnBack;
         private System.Windows.Forms.Button butnForward;
+        private System.Windows.Forms.Button butnRefresh;
+        private System.Windows.Forms.MenuStrip menuBrowser;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem darkModeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightModeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
