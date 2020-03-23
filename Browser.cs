@@ -50,5 +50,11 @@ namespace SimpleBrowser
                 webBrowser1.Navigate(tboxAddressBar.Text);
             }
         }
+
+        private void Browser_Resize(object sender, EventArgs e)
+        {
+            webBrowser1.Width = this.ClientRectangle.Width;
+            webBrowser1.Height = this.ClientRectangle.Height - 100;
+        }
     }
 }

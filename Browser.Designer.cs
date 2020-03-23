@@ -38,11 +38,10 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.Location = new System.Drawing.Point(0, 62);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(800, 450);
+            this.webBrowser1.Size = new System.Drawing.Size(796, 388);
             this.webBrowser1.TabIndex = 0;
             // 
             // butnHome
@@ -78,7 +77,7 @@
             // butnBack
             // 
             this.butnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnBack.Location = new System.Drawing.Point(12, 62);
+            this.butnBack.Location = new System.Drawing.Point(566, 12);
             this.butnBack.Name = "butnBack";
             this.butnBack.Size = new System.Drawing.Size(59, 44);
             this.butnBack.TabIndex = 4;
@@ -89,7 +88,7 @@
             // butnForward
             // 
             this.butnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butnForward.Location = new System.Drawing.Point(77, 62);
+            this.butnForward.Location = new System.Drawing.Point(631, 12);
             this.butnForward.Name = "butnForward";
             this.butnForward.Size = new System.Drawing.Size(58, 44);
             this.butnForward.TabIndex = 5;
@@ -110,6 +109,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Name = "Browser";
             this.Text = "Form1";
+            this.Resize += new System.EventHandler(this.Browser_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
