@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SimpleBrowser
+{
+    public partial class Browser : Form
+    {
+        public Browser()
+        {
+            InitializeComponent();
+            InitializeBrowser();
+        }
+
+        private void InitializeBrowser()
+        {
+            webBrowser1.ScriptErrorsSuppressed = true;
+        }
+
+        private void butnHome_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("www.google.com");
+        }
+
+        private void butnGo_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(tboxAddressBar.Text);
+        }
+
+        private void butnBack_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void butnForward_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+    }
+}
